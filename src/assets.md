@@ -9,4 +9,4 @@ head:
       content: "assets, SORA network, native tokens, bridged assets, wrapped assets, financial activities"
 ---
 
-All about assets in SORA
+All about SORA assets
