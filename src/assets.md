@@ -1,5 +1,5 @@
 ---
-title: "Assets on the SORA Network | SORA Docs"
+title: "Assets in the SORA Network | SORA Docs"
 head:
   - - meta
     - name: description
@@ -9,4 +9,4 @@ head:
       content: "assets, SORA network, native tokens, bridged assets, wrapped assets, financial activities"
 ---
 
-All about assets in SORA
+All about SORA assets
