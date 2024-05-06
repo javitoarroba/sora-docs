@@ -1,78 +1,78 @@
 ---
-title: Kensetsu KEN | SORA Docs
+title: Kensetsu KEN | Documentos SORA
 head:
-  - - meta
-    - name: description
-      content: Learn about KENSETSU, SORA’s MakerDAO equivalent, involving XOR token burn, KEN token rewards, and Kensetsu’s role in the DeFi space on Polkadot
-  - - meta
-    - name: keywords
-      content: token burn, SORA, Maker DAO, stablecoin
+   - - meta
+     - name: descripción
+       content: Obtenga más información sobre KENSETSU, el equivalente MakerDAO de SORA, que incluye la quema de tokens XOR, las recompensas de tokens KEN y el papel de Kensetsu en el espacio DeFi en Polkadot.
+   - - meta
+     - name: palabras clave
+       content: quema de tokens, SORA, Maker DAO, moneda estable
 ---
 
 # Kensetsu KEN
 
-::: info
-This token was originally proposed in [SORA RFP 60](https://github.com/sora-xor/rfps/issues/60) by Satoshi Shibarimoto.
+::: información
+Este token fue propuesto originalmente en [SORA RFP 60](https://github.com/sora-xor/rfps/issues/60) por Satoshi Shibarimoto.
 :::
 
 ## TL;DR
 
-- All of the initial KEN tokens will be distributed to accounts that burn at least 1 million XOR between blocks 14,464,000 and 14,939,200
-- Burning less than 1 million XOR will yield no KEN tokens
-- 1% of all Kensetsu stablecoins minted will be used to buy back and burn KEN on Polkaswap
-- 80% of KEN burned daily will be reminted and given to Demeter Farm for farming rewards on the XOR-KUSD pool, to incentivize liquidity
+- Todos los tokens KEN iniciales se distribuirán a cuentas que quemen al menos 1 millón de XOR entre los bloques 14.464.000 y 14.939.200.
+- Quemar menos de 1 millón de XOR no producirá tokens KEN
+- El 1% de todas las monedas estables de Kensetsu acuñadas se utilizará para recomprar y quemar KEN en Polkaswap.
+- El 80% de los KEN quemados diariamente se recordarán y se entregarán a Demeter Farm para obtener recompensas agrícolas en el grupo XOR-KUSD, para incentivar la liquidez.
 
-## Kensetsu Introduction
+## Introducción a Kensetsu
 
-With KENSETSU, XOR token holders will be able to vote to create stablecoins pegged to any values available via oracles on the SORA network, such as popular fiat currencies, GOLD, SILVER, and others. As with Maker DAO, users can mint stablecoins by locking up collateral in vaults.
+Con KENSETSU, los poseedores de tokens XOR podrán votar para crear monedas estables vinculadas a cualquier valor disponible a través de oráculos en la red SORA, como las populares monedas fiduciarias, ORO, PLATA y otras. Al igual que con Maker DAO, los usuarios pueden acuñar monedas estables encerrando garantías en bóvedas.
 
-In KENSETSU, there will be two vault types:
+En KENSETSU, habrá dos tipos de bóveda:
 
-1. Vaults where users lock up collateral and they can get the collateral back by paying back the minted stablecoins.
-2. Vaults where users lock up collateral, but to get it back, they will have to pay the minted stablecoins + a stability fee.
+1. Bóvedas donde los usuarios guardan garantías y pueden recuperarlas pagando las monedas estables acuñadas.
+2. Bóvedas donde los usuarios guardan garantías, pero para recuperarlas tendrán que pagar las monedas estables acuñadas + una tarifa de estabilidad.
 
-Type-1 vaults cannot be liquidated, but there will be a stability fee as a tax that is taken from the collateral over time, so users won’t ever get their total collateral back. Type-2 vaults can be liquidated if the value of the underlying collateral goes too low.
-Initial collateral assets are expected to be XOR, TBCD, VAL, PSWAP, ETH, and DAI.
+Las bóvedas de tipo 1 no se pueden liquidar, pero habrá una tarifa de estabilidad como impuesto que se deduce de la garantía a lo largo del tiempo, por lo que los usuarios nunca recuperarán la totalidad de su garantía. Las bóvedas de tipo 2 pueden liquidarse si el valor de la garantía subyacente baja demasiado.
+Se espera que los activos de garantía iniciales sean XOR, TBCD, VAL, PSWAP, ETH y DAI.
 
-The ability to mint stablecoins from collateral is very useful. Still, because there is a stability fee on the vaults, there also is a need for the the stablecoins to be liquid and create demand. That’s where KEN comes in.
+La capacidad de acuñar monedas estables a partir de garantías es muy útil. Aún así, debido a que existe una tarifa de estabilidad en las bóvedas, también es necesario que las monedas estables sean líquidas y generen demanda. Ahí es donde entra KEN.
 
-## KENONOMICS
+## KENONOMÍA
 
-KEN is a farming reward token meant to incentivize liquidity for KENSETSU stablecoins. For each stablecoin minted from deposited collateral, 1% extra of the stablecoin will be minted and used to buy back and burn KEN tokens.
-80% of the burned KEN tokens will be reminted and distributed to Demeter farm for farming rewards on the XOR-KUSD pool on Polkaswap.
-To up the stakes, to get an allocation of the initial KEN supply, you will literally have to burn money.
-KEN will be strictly deflationary once launched, meaning the supply will only go down, additionally KEN will only be allocated to accounts on the SORA network that burn (using the `assets.burn` extrinsic) at least 1 million XOR, at a rate of 1 KEN per 1 million XOR burned. You can only get the initial KEN tokens by burning XOR.
+KEN es un token de recompensa agrícola destinado a incentivar la liquidez de las monedas estables de KENSETSU. Por cada moneda estable acuñada a partir de garantía depositada, se acuñará un 1% adicional de la moneda estable y se utilizará para recomprar y quemar tokens KEN.
+El 80% de los tokens KEN quemados se recordarán y distribuirán a la granja Demeter para obtener recompensas en el grupo XOR-KUSD en Polkaswap.
+Para aumentar las apuestas, para obtener una asignación del suministro inicial de KEN, literalmente tendrá que quemar dinero.
+KEN será estrictamente deflacionario una vez lanzado, lo que significa que el suministro solo disminuirá; además, KEN solo se asignará a cuentas en la red SORA que quemen (usando el extrínseco `assets.burn`) al menos 1 millón de XOR, a una tasa de 1 KEN por cada millón de XOR quemado. Solo puedes obtener los tokens KEN iniciales quemando XOR.
 
-## How to Burn XOR
+## Cómo grabar XOR
 
-Burning XOR for fun and profit can be done using the nifty dotapps interface. Just click on [this link](https://polkadot.js.org/apps/#/extrinsics) and fill out the form as follows:
+Se puede grabar XOR por diversión y ganancias utilizando la ingeniosa interfaz de dotapps. Simplemente haga clic en [este enlace](https://polkadot.js.org/apps/#/extrinsics) y complete el formulario de la siguiente manera:
 
-![](../.gitbook/assets/ken-burn-extrinsics.png)
+![](/.gitbook/assets/ken-burn-extrinsics.png)
 
-To fill out the form:
+Para llenar el formulario:
 
-1. Select the assets module and burn extrinsic `(assets.burn)`
-2. Select the account that has the XOR you want to burn.
-3. The asset ID to burn is XOR: `0x0200000000000000000000000000000000000000000000000000000000000000`
-4. For the amount, you need 18 zeros after the amount of XOR you want to burn, so burning 1 million XOR is: `1000000000000000000000000`.
-5. Then sign the transaction and confirm that your XOR balance went down correctly, showing you burned the XOR.
+1. Seleccione el módulo de activos y grabe el `(assets.burn)` extrínseco
+2. Seleccione la cuenta que tiene el XOR que desea grabar.
+3. El ID del activo que se va a grabar es XOR: `0x0200000000000000000000000000000000000000000000000000000000000000`
+4. Para la cantidad, necesita 18 ceros después de la cantidad de XOR que desea quemar, por lo que quemar 1 millón de XOR es: `10000000000000000000000000`.
+5. Luego firme la transacción y confirme que su saldo XOR disminuyó correctamente, lo que demuestra que quemó el XOR.
 
-All XOR burned by calling the `assets.burn` extrinsic between blocks `14,464,000` and `14,939,200` will be considered in the calculated burned amount. To be eligible for the KEN drop, at least 1 million XOR should be burned by an account. 1 KEN will be given for each million XOR burned.
+Todo XOR quemado llamando al extrínseco `assets.burn` entre los bloques `14,464,000` y `14,939,200` se considerará en la cantidad quemada calculada. Para ser elegible para la caída de KEN, una cuenta debe quemar al menos 1 millón de XOR. Se entregará 1 KEN por cada millón de XOR quemado.
 
-For example, if 999,999 XOR are burned, 0 KEN will be given to an
-account. If 1 million XOR are burned, 1 KEN will be given to an
-account. And if 1.6 million XOR are burned, then 1.6 KEN will be given
-to an account.
+Por ejemplo, si se queman 999,999 XOR, se le dará 0 KEN a un
+cuenta. Si se queman 1 millón de XOR, se entregará 1 KEN a un
+cuenta. Y si se queman 1,6 millones de XOR, se darán 1,6 KEN
+a una cuenta.
 
-::: info
-You can track the burnt XOR on the Polkaswap interface [Kensetsu
-tab](https://polkaswap.io/#/kensetsu).
-KEN reservation through burning XOR ended on the 20th of March, 2024
+::: información
+Puede rastrear el XOR quemado en la interfaz de Polkaswap [Kensetsu
+pestaña](https://polkaswap.io/#/kensetsu).
+La reserva de KEN mediante la quema de XOR finalizó el 20 de marzo de 2024
 :::
 
-> This article was originally published on [Medium](https://medium.com/@shibarimoto/kensetsu-ken-356077ebee78) and written by community member Satoshi Shibarimoto. This entry retains the basic principles of _Kenonomics_.
+> Este artículo fue publicado originalmente en [Medium](https://medium.com/@shibarimoto/kensetsu-ken-356077ebee78) y escrito por el miembro de la comunidad Satoshi Shibarimoto. Esta entrada conserva los principios básicos de _Kenonomics_.
 
-## Learn More
+## Aprende más
 
 - [VAL Tokenomics](/val.md)
-- [Requesting Features on SORA](/rfp.md)
+- [Solicitud de funciones en SORA](/rfp.md)
